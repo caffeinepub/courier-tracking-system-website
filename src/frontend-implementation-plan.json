@@ -1,0 +1,49 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Expose Admin entry point and auth control in global header",
+  "requirements": [
+    {
+      "id": "REQ-10",
+      "summary": "Make the Admin entry point visible in the global header for all users while keeping /admin protected by the existing AdminGuard.",
+      "acceptanceCriteria": [
+        "The header shows an \"Admin\" navigation item on all pages (including when not logged in).",
+        "Clicking \"Admin\" navigates to /admin and, when not authenticated, the existing AdminGuard login prompt is shown.",
+        "When authenticated but not an admin, the existing AdminGuard \"Access Denied\" UI is shown (no unauthorized admin content is rendered)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/SiteHeader.tsx",
+          "operation": "modify",
+          "description": "Update the header navigation to always render an \"Admin\" navigation item (no longer conditional on authentication) that routes to /admin. Keep authorization intact by relying on the existing AdminGuard already wrapping the AdminPage. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Confirm /admin remains routed to the existing AdminPage (which is wrapped by AdminGuard) and ensure no alternate unguarded admin UI is introduced while wiring the header change. Verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "summary": "Add a login/logout control to the global header using the existing Internet Identity LoginButton so users can authenticate from anywhere.",
+      "acceptanceCriteria": [
+        "The header includes a login/logout control that uses the existing Internet Identity flow.",
+        "When logged out, the control displays \"Login\"; when logged in, it displays \"Logout\".",
+        "After login/logout, the UI updates appropriately without requiring a manual refresh (e.g., header state reflects the new auth state)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/SiteHeader.tsx",
+          "operation": "modify",
+          "description": "Add the existing LoginButton control into the header layout (e.g., on the right side of the navigation) so it is available on all pages. Ensure it is the current Internet Identity-based component and that header state reflects auth changes via the existing provider/hook. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/LoginButton.tsx",
+          "operation": "modify",
+          "description": "Validate the existing Internet Identity login/logout UX aligns with the header placement (labels \"Login\"/\"Logout\" already present) and remains safe to reuse in multiple locations (header + admin page). Only adjust presentation details if needed; keep the underlying flow and query cache clearing behavior. Verify the component's usage instructions before implementing."
+        }
+      ]
+    }
+  ]
+}

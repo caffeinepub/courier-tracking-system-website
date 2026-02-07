@@ -1,0 +1,15 @@
+{
+  "frontend/index.css": "Root CSS file with warm logistics-inspired OKLCH color palette (charcoal, off-white, amber accents) for both light and dark modes, avoiding blue/purple tones.",
+  "frontend/src/index.css": "Re-exports the root index.css to ensure styles load correctly in the application.",
+  "frontend/src/App.tsx": "Main application component with TanStack Router setup, defining routes for public tracking and admin pages with a shared layout including header and footer.",
+  "frontend/src/components/SiteHeader.tsx": "Site header component displaying the courier logo, navigation links for tracking and admin access (always visible), and a login/logout button using Internet Identity.",
+  "frontend/src/components/LoginButton.tsx": "Reusable login/logout button component using Internet Identity with loading states and query cache clearing on logout.",
+  "frontend/src/components/AdminGuard.tsx": "Authorization wrapper component that requires Internet Identity login and admin role verification before rendering admin UI, showing appropriate access denied screens otherwise.",
+  "frontend/src/components/TrackingTimeline.tsx": "Visual timeline component displaying shipment tracking events chronologically with status badges, timestamps, locations, and optional notes.",
+  "frontend/src/pages/TrackShipmentPage.tsx": "Public tracking page with hero section, search form for tracking numbers, and results display showing shipment details and tracking timeline.",
+  "frontend/src/pages/AdminPage.tsx": "Admin panel with tabbed interface for creating shipments (with auto-generate tracking number button and auto-generation on empty submit), adding tracking events, and viewing all shipments, protected by AdminGuard component.",
+  "frontend/src/hooks/useShipmentTracking.ts": "React Query hooks for fetching shipment data and latest tracking events from the backend canister.",
+  "frontend/src/hooks/useAdmin.ts": "React Query hooks for admin operations including role checking, shipment creation, event addition, listing all shipments, and generating tracking numbers via the backend actor.",
+  "frontend/tailwind.config.js": "Tailwind configuration extending the theme with warm palette utilities aligned with CSS variable-based colors.",
+  "frontend/index.html": "HTML entry point with favicon reference to generated courier logo and updated page title."
+}

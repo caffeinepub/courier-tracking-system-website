@@ -1,0 +1,118 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 7,
+  "summary": "Build a courier tracking system website.",
+  "architectural_notes": [],
+  "known_issues": [
+    "User reports the website has no visible Admin option/admin interface entry point (admin panel missing or not accessible)."
+  ],
+  "isFixRequest": true,
+  "existing_features": [
+    {
+      "id": "feature-create-a-public-shipment-tracking-experience-a-page-where-a-user-can-enter-a-tracking-number-and-view-the-latest-shipment-details-and-full-status-timeline-date-time-location-status-optional-note",
+      "title": "Create a public shipment tracking experience: a page where a user can enter a tracking number and view the latest shipment details and full status timeline (date/time, location, status, optional note).",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-an-admin-interface-secured-by-internet-identity-that-allows-an-authenticated-admin-to-create-a-shipment-tracking-number-origin-destination-recipient-name-optional-and-append-new-tracking-events-status-location-note-optional-timestamp",
+      "title": "Add an admin interface secured by Internet Identity that allows an authenticated admin to: create a shipment (tracking number, origin, destination, recipient name optional), and append new tracking events (status, location, note optional, timestamp).",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-coherent-modern-visual-theme-for-the-website-and-apply-it-consistently-across-pages-typography-spacing-cards-forms-and-status-timeline-use-a-warm-logistics-inspired-palette-e-g-charcoal-off-white-amber-accents-and-avoid-blue-purple",
+      "title": "Create a coherent, modern visual theme for the website and apply it consistently across pages (typography, spacing, cards, forms, and status timeline). Use a warm logistics-inspired palette (e.g., charcoal + off-white + amber accents) and avoid blue/purple.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-generated-static-brand-assets-and-render-them-in-the-ui-header-landing-and-optionally-favicon-style-usage-from-frontend-public-assets-generated",
+      "title": "Add generated static brand assets and render them in the UI (header/landing and optionally favicon-style usage) from frontend/public/assets/generated.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-admin-panel-create-shipment-flow-to-support-auto-tracking-id-generation-provide-a-ui-control-to-generate-fill-the-tracking-number-field-and-allow-creating-a-shipment-without-manually-typing-a-tracking-number-by-generating-one-during-submission-when-the-field-is-empty",
+      "title": "Update the Admin Panel \"Create Shipment\" flow to support auto tracking ID generation: provide a UI control to generate/fill the Tracking Number field, and allow creating a shipment without manually typing a tracking number by generating one during submission when the field is empty.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-frontend-react-query-hook-and-wiring-in-the-admin-data-layer-to-call-the-new-backend-tracking-number-generation-api-using-the-authenticated-actor-consistent-with-existing-useadmin-hooks",
+      "title": "Add a frontend React Query hook and wiring in the admin data layer to call the new backend tracking-number generation API using the authenticated actor (consistent with existing useAdmin hooks).",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-global-header-navigation-so-the-admin-panel-entry-point-is-visible-and-usable-even-when-the-user-is-not-yet-authenticated-while-still-protecting-the-admin-route-with-the-existing-adminguard",
+      "title": "Update the global header navigation so the Admin panel entry point is visible and usable even when the user is not yet authenticated, while still protecting the /admin route with the existing AdminGuard.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-clear-authentication-control-to-the-header-using-the-existing-internet-identity-loginbutton-so-users-can-sign-in-out-without-needing-to-already-know-the-admin-route",
+      "title": "Add a clear authentication control to the header (using the existing Internet Identity LoginButton) so users can sign in/out without needing to already know the /admin route.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create a courier tracking system website (allow users to track shipments).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Implement backend data models and APIs for shipments and tracking events, including: create shipment, add tracking event, get shipment by tracking number, and list shipments for administration.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Define an initial authorization rule for admins in the backend (e.g., an allowlist of principals) and provide a simple way to manage it for initial deployment (at minimum: set the first admin to the canister installer/owner).",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Add additional courier-company features requested by user, including auto tracking ID generation for new shipments (and potentially a booking form, rate calculator, and SMS/WhatsApp status update notifications).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Add a backend API that allows an authenticated admin to generate a new unique tracking number for a shipment, using a consistent courier-style format (e.g., a fixed prefix plus a time-based or other collision-resistant suffix) and guaranteeing it does not already exist in stored shipments.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Courier Tracking System Website",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

@@ -1,0 +1,23 @@
+{
+  "backend/main.mo": "Implements shipment tracking backend with authorization, user profiles, shipment creation, tracking events, and tracking number generation using AccessControl.",
+  "feature_evidence.json": "Contains feature evidence reports linking features to modified files, components, test IDs, and confidence levels.",
+  "frontend-file-summaries.txt": "Provides short summaries of all frontend files for documentation or build-planning reference.",
+  "frontend/index.css": "Defines global Tailwind setup and a warm OKLCH color palette for light and dark themes.",
+  "frontend/index.html": "HTML entry point loading the React app with favicon and main script.",
+  "frontend/src/App.tsx": "Configures TanStack Router, global layout with header/footer, and routes for tracking and admin pages.",
+  "frontend/src/components/AdminGuard.tsx": "Protects admin pages by checking Internet Identity authentication and admin role, showing appropriate UI states.",
+  "frontend/src/components/LoginButton.tsx": "Login/logout button using Internet Identity with loading states and query cache clearing.",
+  "frontend/src/components/SiteHeader.tsx": "Header with branding, navigation to tracking and admin pages, and an Internet Identity login button.",
+  "frontend/src/components/TrackingTimeline.tsx": "Displays shipment tracking events in a chronological visual timeline with icons and details.",
+  "frontend/src/hooks/useActor.ts": "Creates and manages the backend actor, handling identity-based configuration and auto‑refetching dependent queries.",
+  "frontend/src/hooks/useAdmin.ts": "React Query hooks for admin actions like fetching roles, shipments, and creating shipments or tracking events.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Provides an authentication context using Internet Identity, managing login state, identity loading, and AuthClient setup.",
+  "frontend/src/hooks/useShipmentTracking.ts": "React Query hooks to fetch a shipment and its latest tracking event by tracking number.",
+  "frontend/src/index.css": "Re-exports global CSS by importing the root index.css file.",
+  "frontend/src/main.tsx": "Application entry point setting up React Query and Internet Identity providers before rendering App.",
+  "frontend/src/pages/AdminPage.tsx": "Admin interface for creating shipments, generating tracking numbers, and adding tracking events.",
+  "frontend/src/pages/TrackShipmentPage.tsx": "UI for users to search shipments by tracking number and view tracking details or errors.",
+  "frontend/src/utils/urlParams.ts": "Utilities for reading, storing, and clearing URL and session-based parameters.",
+  "frontend/tailwind.config.js": "Tailwind CSS configuration defining theme customization, colors, animations, and plugins.",
+  "project_state.json": "Defines project state for a courier tracking site with feature list and notes a missing accessible admin interface."
+}

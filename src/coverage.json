@@ -1,0 +1,50 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-07T10:15:07.864Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 2,
+    "implemented": 2,
+    "items": [
+      {
+        "id": "REQ-10",
+        "summary": "Update the global header navigation so the Admin panel entry point is visible and usable even when the user is not yet authenticated, while still protecting the /admin route with the existing AdminGuard.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/SiteHeader.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/SiteHeader.tsx"
+        ]
+      },
+      {
+        "id": "REQ-11",
+        "summary": "Add a clear authentication control to the header (using the existing Internet Identity LoginButton) so users can sign in/out without needing to already know the /admin route.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/SiteHeader.tsx",
+          "frontend/src/components/LoginButton.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/SiteHeader.tsx"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "build-request.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/src/components/SiteHeader.tsx",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

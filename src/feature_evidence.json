@@ -1,0 +1,43 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-update-the-global-header-navigation-so-the-admin-panel-entry-point-is-visible-and-usable-even-when-the-user-is-not-yet-authenticated-while-still-protecting-the-admin-route-with-the-existing-adminguard",
+      "featureTitle": "Update the global header navigation so the Admin panel entry point is visible and usable even when the user is not yet authenticated, while still protecting the /admin route with the existing AdminGuard.",
+      "files": [
+        "frontend/src/components/SiteHeader.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-10"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-clear-authentication-control-to-the-header-using-the-existing-internet-identity-loginbutton-so-users-can-sign-in-out-without-needing-to-already-know-the-admin-route",
+      "featureTitle": "Add a clear authentication control to the header (using the existing Internet Identity LoginButton) so users can sign in/out without needing to already know the /admin route.",
+      "files": [
+        "frontend/src/components/SiteHeader.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-11"
+      ],
+      "confidence": "high"
+    }
+  ]
+}
